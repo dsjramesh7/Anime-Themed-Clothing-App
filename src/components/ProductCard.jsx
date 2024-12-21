@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { COMPANY_LOGO } from "../utils/constants";
 import Button from "./Button";
 
-const ProductCard = ({ title, price, image }) => {
+const ProductCard = ({ title, price, image, id }) => {
   return (
     <div className="h-auto w-[200px] bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between border border-red-500">
       <div className="flex justify-center">
@@ -19,7 +20,9 @@ const ProductCard = ({ title, price, image }) => {
       </div>
 
       <div className="mt-4 flex justify-center">
-        <Button btnName={"View Product"} className="w-full" />
+        <Link to={`/product/${id}`}>
+          <Button btnName={"View Product"} className="w-full" />
+        </Link>
       </div>
     </div>
   );

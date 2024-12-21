@@ -34,6 +34,7 @@ const Products = () => {
               title={singleProduct.name}
               price={singleProduct.price}
               image={singleProduct.image}
+              id={singleProduct.id}
             />
           ))
         ) : (
